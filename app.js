@@ -126,12 +126,42 @@ const songs=[
 ]
 
 
+Array.from(document.getElementsByClassName('songItem')).forEach((e,i)=>{
+    e.getElementsByTagName('img')[0].src=songs[i].poster;
+    e.getElementsByTagName('h5')[0].innerHTML=songs[i].songName
+})
+
+let masterPlay =document.getElementById('masterPlay');
+let wave=document.getElementById('wave');
+
+masterPlay.addEventListener('click',()=>{
+    if(music.paused || music.currentTime<=0){
+        music.play();
+        wave.classList.add('active1');
+        masterPlay.classList.remove('bi-play-fill');
+        masterPlay.classList.add('bi-pause-fill');
+    }else{
+        music.pause();
+        wave.classList.remove('active1');
+        masterPlay.classList.remove('bi-pause-fill');
+        masterPlay.classList.add('bi-play-fill');
+    }
+})
 
 
-
-
-
-
+let index=0;
+let poster_master_play=document.getElementById('poster_master_play');
+Array.from(document.getElementsByClassName('playlistPlay')).forEach((e)=>{
+    e.addEventListener('click',(el)=>{
+       index=el.target.id;
+        // console.log(index);
+        music.src=`audio/${index}.mp3`;
+        poster_master_play.src=`img/${index}.jpg`;
+        music.play()
+        masterPlay.classList.remove('bi-play-fill');
+        masterPlay.classList.add('bi-pause-fill');
+    })
+})
 
 
 

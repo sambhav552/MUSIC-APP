@@ -215,7 +215,7 @@ header .master_play .wave .wave3 {
    background: #36e2ec;
    margin-right: 3px;
    border-radius: 10px 10px 0 0;
-   animation: wave 0.5s linear infinite;
+   animation: unset;
 }
 
 header .master_play .wave .wave2 {
@@ -230,17 +230,18 @@ header .master_play .wave .wave3 {
 
 /* javascript classes */
 
-/* header .master_play .active1 .wave1 {
+header .master_play .active1 .wave1 {
+   
    animation: wave 0.5s linear infinite;
 }
 
 header .master_play .active1 .wave2 {
-   animation-delay: 0.4s;  Modified delay for second wave 
- }
+   animation-delay: 0.4s;
+}
 
 header .master_play .active1 .wave3 {
-   animation-delay: 0.8s; /* Modified delay for third wave 
- } */
+   animation-delay: 0.8s;
+}
 
 /* --------------------------------------------------------------------------------------- */
 
