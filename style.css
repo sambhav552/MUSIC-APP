@@ -381,6 +381,7 @@ header .master_play .vol {
    height: 2px;
    background: rgba(105, 105, 170, 0.1);
    margin-left: 50px;
+   /* opacity: 0; */
 }
 
 header .master_play .vol .bi {
@@ -388,8 +389,8 @@ header .master_play .vol .bi {
    position: absolute;
    color: white;
    font-size: 25px;
-   top: -13px;
-   left: -35px;
+   top: -17px;
+   left: -30px;
 }
 
 header .master_play .vol input {
@@ -407,7 +408,7 @@ header .master_play .vol input {
 header .master_play .vol .vol_bar {
    position: absolute;
    background: #36e2ec;
-   width: 100%;
+   width: 50%;
    height: 100%;
    top: 0;
    transition: 1s linear;
@@ -420,7 +421,7 @@ header .master_play .vol .dot {
    height: 5px;
    background: #36e2ec;
    border-radius: 50%;
-   left: 1000%;
+   left: 100%;
    top: -1.5px;
    transition: 1s linear;
 }
